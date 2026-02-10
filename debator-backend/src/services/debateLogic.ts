@@ -27,13 +27,13 @@ export class debateLogic {
     );
 
     this.againstAI = AIAdapterFactory.createModel(
-      configuration.forModel.provider as any,
-      configuration.forModel.model || "",
+      configuration.againstModel.provider as any,
+      configuration.againstModel.model || "",
     );
 
     this.judgeAI = AIAdapterFactory.createModel(
-      configuration.forModel.provider as any,
-      configuration.forModel.model || "",
+      configuration.judgeModel.provider as any,
+      configuration.judgeModel.model || "",
     );
 
     this.maxTokens = parseInt(process.env.MAXTOKENS_PER_ROUND || "1000");
